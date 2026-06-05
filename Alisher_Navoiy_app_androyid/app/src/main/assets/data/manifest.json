@@ -1,0 +1,8 @@
+[
+  { "id": 1, "slug": "hayrat-ul-abror", "title_uz": "Hayrat ul-abror", "total_pages": 22, "version": 1, "is_bundled": true, "checksum": "sha256-hash1" },
+  { "id": 2, "slug": "farhod-va-shirin", "title_uz": "Farhod va Shirin", "total_pages": 28, "version": 1, "is_bundled": true, "checksum": "sha256-hash2" },
+  { "id": 3, "slug": "layli-va-majnun", "title_uz": "Layli va Majnun", "total_pages": 22, "version": 1, "is_bundled": true, "checksum": "sha256-hash3" },
+  { "id": 4, "slug": "sabai-sayyor", "title_uz": "Sab'ai sayyor", "total_pages": 23, "version": 1, "is_bundled": true, "checksum": "sha256-hash4" },
+  { "id": 5, "slug": "saddi-iskandariy", "title_uz": "Saddi Iskandariy", "total_pages": 28, "version": 1, "is_bundled": true, "checksum": "sha256-hash5" },
+  { "id": 6, "slug": "badoiy-ul-vasat", "title_uz": "Badoiy ul-vasat", "total_pages": 26, "version": 1, "is_bundled": true, "checksum": "sha256-hash6" }
+]

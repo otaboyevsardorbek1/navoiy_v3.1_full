@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/textViewTerm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="So'z"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorSecondary" />
+
+    <TextView
+        android:id="@+id/textViewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Turkum"
+        android:textSize="14sp"
+        android:alpha="0.7"
+        android:layout_marginTop="4dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textViewDefinition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ta'rifi bu yerda bo'ladi."
+        android:textSize="17sp"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="#333333" />
+
+</LinearLayout>

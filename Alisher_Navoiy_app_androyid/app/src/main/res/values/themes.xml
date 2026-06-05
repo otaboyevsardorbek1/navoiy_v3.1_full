@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.AlisherNavoiyApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/classic_primary</item>
+        <item name="colorSecondary">@color/classic_accent</item>
+        <item name="android:windowBackground">@color/classic_background</item>
+        <item name="colorPrimaryDark">@color/classic_primary</item>
+        <item name="reader_text_color">@color/black</item>
+        <item name="reader_title_color">@color/black</item>
+        <item name="quiz_card_bg">#FFFFFF</item>
+        <item name="reader_divider">#DDDDDD</item>
+    </style>
+
+    <style name="Theme.AlisherNavoiyApp" parent="Base.Theme.AlisherNavoiyApp" />
+
+    <style name="Theme.AlisherNavoiyApp.Classic" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/classic_primary</item>
+        <item name="colorSecondary">@color/classic_accent</item>
+        <item name="android:windowBackground">@color/classic_background</item>
+        <item name="reader_text_color">#2C1B0E</item>
+        <item name="reader_title_color">#5D3A1A</item>
+        <item name="quiz_card_bg">#FDF6E3</item>
+        <item name="reader_divider">#E9DCC9</item>
+    </style>
+
+    <style name="Theme.AlisherNavoiyApp.Modern" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/modern_primary</item>
+        <item name="colorSecondary">@color/modern_accent</item>
+        <item name="android:windowBackground">@color/modern_background</item>
+        <item name="reader_text_color">#1E293B</item>
+        <item name="reader_title_color">#0F172A</item>
+        <item name="quiz_card_bg">#F8FAFC</item>
+        <item name="reader_divider">#E2E8F0</item>
+    </style>
+
+    <style name="Theme.AlisherNavoiyApp.Dark" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dark_primary</item>
+        <item name="colorSecondary">@color/dark_accent</item>
+        <item name="android:windowBackground">@color/dark_background</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="reader_text_color">#E2E8F0</item>
+        <item name="reader_title_color">#F8FAFC</item>
+        <item name="quiz_card_bg">#1E293B</item>
+        <item name="reader_divider">#334155</item>
+    </style>
+
+    <style name="Theme.AlisherNavoiyApp.Dialog" parent="Theme.Material3.DayNight.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <attr name="reader_text_color" format="color" />
+    <attr name="reader_title_color" format="color" />
+    <attr name="quiz_card_bg" format="color" />
+    <attr name="reader_divider" format="color" />
+</resources>

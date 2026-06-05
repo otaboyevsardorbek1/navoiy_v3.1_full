@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "total": 10,
+  "quizlar": [
+    {
+      "id": 1,
+      "asar_slug": "farhod-va-shirin",
+      "page_number": 3,
+      "subject": "Adabiyot + Tarix",
+      "question": "\"Farhod va Shirin\" dostonida Farhod qaysi kasbi orqali xalq uchun xizmat qiladi?",
+      "type": "single",
+      "options": [
+        "Shoir",
+        "Me'mor va muhandis",
+        "Savdogar",
+        "Dehqon"
+      ],
+      "correct_answers": [
+        1
+      ],
+      "explanation": "Farhod me'mor va muhandis sifatida tog'larni kesib, xalq uchun ariq qazib beradi.",
+      "difficulty": 2,
+      "points": 15
+    },
+    {
+      "id": 2,
+      "asar_slug": "layli-va-majnun",
+      "page_number": 2,
+      "subject": "Adabiyot + Geografiya",
+      "question": "\"Layli va Majnun\" dostonida voqealar qaysi hududlarda sodir bo'ladi?",
+      "type": "single",
+      "options": [
+        "Markaziy Osiyo",
+        "Arab cho'llari",
+        "Hindiston",
+        "Xitoy"
+      ],
+      "correct_answers": [
+        1
+      ],
+      "explanation": "Doston Arab cho'llarida sodir bo'ladi — bu haqiqiy arab rivoyatiga asoslangan.",
+      "difficulty": 2,
+      "points": 15
+    },
+    {
+      "id": 3,
+      "asar_slug": "hayrat-ul-abror",
+      "page_number": 1,
+      "subject": "Adabiyot + Falsafa",
+      "question": "\"Hayrat ul-abror\" asarida asosan qaysi g'oya targ'ib qilinadi?",
+      "type": "single",
+      "options": [
+        "Boylik orttirish",
+        "Adolat va komil inson g'oyasi",
+        "Urush va g'alaba",
+        "Savdo rivoji"
+      ],
+      "correct_answers": [
+        1
+      ],
+      "explanation": "Asar adolat, kamolot va komil inson g'oyasini ulug'laydi.",
+      "difficulty": 1,
+      "points": 10
+    },
+    {
+      "id": 4,
+      "asar_slug": null,
+      "page_number": null,
+      "subject": "Adabiyot + Tarix",
+      "question": "Alisher Navoiy qaysi tarixiy davlat davrida yashagan?",
+      "type": "single",
+      "options": [
+        "Temuriylar davlati",
+        "Shayboniylar davlati",
+        "Qoraxoniylar davlati",
+        "Xorazmshohlar davlati"
+      ],
+      "correct_answers": [
+        0
+      ],
+      "explanation": "Navoiy Temuriylar davrida (1441-1501) yashagan va faoliyat yuritgan.",
+      "difficulty": 1,
+      "points": 10
+    },
+    {
+      "id": 5,
+      "asar_slug": null,
+      "page_number": null,
+      "subject": "Adabiyot + Tilshunoslik",
+      "question": "Navoiy asarlarida asosan qaysi til ishlatilgan?",
+      "type": "single",
+      "options": [
+        "Arab tili",
+        "Fors tili",
+        "Eski o'zbek (chig'atoy) tili",
+        "Turk tili"
+      ],
+      "correct_answers": [
+        2
+      ],
+      "explanation": "Navoiy o'z asarlarini asosan eski o'zbek (chig'atoy) tilida yozgan va bu tilning adabiy til ekanini isbotlagan.",
+      "difficulty": 1,
+      "points": 10
+    },
+    {
+      "id": 6,
+      "asar_slug": "farhod-va-shirin",
+      "page_number": 5,
+      "subject": "Adabiyot + Axloq",
+      "question": "\"Farhod va Shirin\" dostonida Farhod obrazida qaysi fazilatlar ulug'lanadi?",
+      "type": "multiple",
+      "options": [
+        "Hasad va boylik",
+        "Mehnatsevarlik",
+        "Sadoqat",
+        "Dangasalik"
+      ],
+      "correct_answers": [
+        1,
+        2
+      ],
+      "explanation": "Farhod mehnatsevarlik va sadoqat timsoli sifatida tasvirlanadi.",
+      "difficulty": 2,
+      "points": 20
+    },
+    {
+      "id": 7,
+      "asar_slug": "saddi-iskandariy",
+      "page_number": 2,
+      "subject": "Adabiyot + Tarix",
+      "question": "\"Saddi Iskandariy\" asarida qaysi tarixiy shaxs obrazi tasvirlangan?",
+      "type": "single",
+      "options": [
+        "Amir Temur",
+        "Iskandar (Aleksandr)",
+        "Chingizxon",
+        "Jaloliddin Manguberdi"
+      ],
+      "correct_answers": [
+        1
+      ],
+      "explanation": "Doston Makedoniyalik Aleksandr (Iskandar) hayoti va yurishlariga bag'ishlangan.",
+      "difficulty": 1,
+      "points": 10
+    },
+    {
+      "id": 8,
+      "asar_slug": null,
+      "page_number": null,
+      "subject": "Adabiyot + Madaniyat",
+      "question": "Navoiy qaysi shaharda faoliyat yuritgan?",
+      "type": "single",
+      "options": [
+        "Buxoro",
+        "Samarqand",
+        "Hirot",
+        "Toshkent"
+      ],
+      "correct_answers": [
+        2
+      ],
+      "explanation": "Navoiy asosan Hirot shahrida (hozirgi Afg'oniston) faoliyat yuritgan.",
+      "difficulty": 1,
+      "points": 10
+    },
+    {
+      "id": 9,
+      "asar_slug": null,
+      "page_number": null,
+      "subject": "Adabiyot + Tarix",
+      "question": "\"Xamsa\" nechta dostonni o'z ichiga oladi?",
+      "type": "single",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct_answers": [
+        2
+      ],
+      "explanation": "Xamsa arabcha 'besh' so'zidan olingan bo'lib, 5 ta dostondan iborat.",
+      "difficulty": 1,
+      "points": 10
+    },
+    {
+      "id": 10,
+      "asar_slug": null,
+      "page_number": null,
+      "subject": "Adabiyot + Tarbiya",
+      "question": "Navoiy asarlarida komil inson qanday sifatga ega bo'lishi kerak?",
+      "type": "multiple",
+      "options": [
+        "Boy bo'lish",
+        "Ilmli bo'lish",
+        "Odobli bo'lish",
+        "Mashhur bo'lish"
+      ],
+      "correct_answers": [
+        1,
+        2
+      ],
+      "explanation": "Navoiy asarlarida komil inson ilmli va odobli bo'lishi kerakligi ta'kidlanadi.",
+      "difficulty": 2,
+      "points": 15
+    }
+  ]
+}

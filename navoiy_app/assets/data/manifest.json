@@ -1,0 +1,132 @@
+{
+  "bundle_version": 1,
+  "generated_at": "2025-01-01T00:00:00Z",
+  "asarlar": [
+    {
+      "id": 1,
+      "slug": "hayrat-ul-abror",
+      "title": "Hayrat ul-abror",
+      "title_uz": "Hayrat ul-abror",
+      "title_cyrillic": "Ҳайрат ул-аброр",
+      "category": "doston",
+      "year": 1483,
+      "language": "uz_cyrillic",
+      "description": "Xamsa'ning birinchi dostoni — Yaxshilar hayrati. 64 bobdan iborat axloqiy-falsafiy doston.",
+      "tags": [
+        "doston",
+        "axloq",
+        "xamsa"
+      ],
+      "total_pages": 22,
+      "version": 1,
+      "checksum": "e254fbc62c5da0b0405247467018c9ceebd0a2225972a3fb4ecd2eaea773bdf0",
+      "file_size_bytes": 494125,
+      "is_bundled": true
+    },
+    {
+      "id": 2,
+      "slug": "farhod-va-shirin",
+      "title": "Farhod va Shirin",
+      "title_uz": "Farhod va Shirin",
+      "title_cyrillic": "Фарҳод ва Ширин",
+      "category": "doston",
+      "year": 1484,
+      "language": "uz_cyrillic",
+      "description": "Xamsa'ning ikkinchi dostoni — Muhabbat va sadoqat haqidagi buyuk doston.",
+      "tags": [
+        "doston",
+        "muhabbat",
+        "xamsa"
+      ],
+      "total_pages": 28,
+      "version": 1,
+      "checksum": "517d2d392e5589d22967a6a325d71111ccabe6fe72b023b6cc145dc2e03fbb2d",
+      "file_size_bytes": 996154,
+      "is_bundled": true
+    },
+    {
+      "id": 3,
+      "slug": "layli-va-majnun",
+      "title": "Layli va Majnun",
+      "title_uz": "Layli va Majnun",
+      "title_cyrillic": "Лайли ва Мажнун",
+      "category": "doston",
+      "year": 1484,
+      "language": "uz_cyrillic",
+      "description": "Xamsa'ning uchinchi dostoni — Ishq va iztirob haqidagi sehrli doston.",
+      "tags": [
+        "doston",
+        "ishq",
+        "xamsa"
+      ],
+      "total_pages": 22,
+      "version": 1,
+      "checksum": "56d09bc7848b15c689ab2877f8b3a76c74129d76fc6e06f3bf951cd989a1ff90",
+      "file_size_bytes": 572919,
+      "is_bundled": true
+    },
+    {
+      "id": 4,
+      "slug": "sabai-sayyor",
+      "title": "Sab'ai sayyor",
+      "title_uz": "Sab'ai sayyor",
+      "title_cyrillic": "Сабъаи сайёр",
+      "category": "doston",
+      "year": 1484,
+      "language": "uz_cyrillic",
+      "description": "Xamsa'ning to'rtinchi dostoni — Etti sayyora haqida.",
+      "tags": [
+        "doston",
+        "falsafa",
+        "xamsa"
+      ],
+      "total_pages": 23,
+      "version": 1,
+      "checksum": "4a8cbcfb7b4d06c20f85814dee9ddba106791972eae4d598d241cbe99ac4106e",
+      "file_size_bytes": 726270,
+      "is_bundled": true
+    },
+    {
+      "id": 5,
+      "slug": "saddi-iskandariy",
+      "title": "Saddi Iskandariy",
+      "title_uz": "Saddi Iskandariy",
+      "title_cyrillic": "Садди Искандарий",
+      "category": "doston",
+      "year": 1485,
+      "language": "uz_cyrillic",
+      "description": "Xamsa'ning beshinchi dostoni — Iskandar to'sig'i. Tarixiy-falsafiy doston.",
+      "tags": [
+        "doston",
+        "tarix",
+        "xamsa"
+      ],
+      "total_pages": 28,
+      "version": 1,
+      "checksum": "bdea62a86f50262b2a25e8c53d8b5f0f0846bd4244de7ac3ac64f7fe4448867a",
+      "file_size_bytes": 1155261,
+      "is_bundled": true
+    },
+    {
+      "id": 6,
+      "slug": "badoiy-ul-vasat",
+      "title": "Badoiy ul-vasat",
+      "title_uz": "Badoiy ul-vasat",
+      "title_cyrillic": "Бадоеъ ул-васат",
+      "category": "devonlar",
+      "year": 1498,
+      "language": "uz_cyrillic",
+      "description": "Xazoyin ul-maoniy devonining ikkinchi qismi — o'rta yosh g'azallari.",
+      "tags": [
+        "devon",
+        "gazal",
+        "lirika"
+      ],
+      "total_pages": 26,
+      "version": 1,
+      "checksum": "4ad968ba28bc0856383304b322ac54acc0e43a598256ebfbc3ed1a992b0bcf50",
+      "file_size_bytes": 931052,
+      "is_bundled": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Rasmni ikonka markazida kichikroq hajmda ko'rsatish -->
+    <item
+        android:width="75dp"
+        android:height="75dp"
+        android:gravity="center">
+        <bitmap
+            android:src="@drawable/alishernavoiy"
+            android:filter="true" />
+    </item>
+</layer-list>

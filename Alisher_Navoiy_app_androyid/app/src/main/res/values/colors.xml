@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Classic Theme -->
+    <color name="classic_primary">#8B5E3C</color> <!-- Jigarrang -->
+    <color name="classic_accent">#D4A843</color> <!-- Oltin -->
+    <color name="classic_background">#F5F5DC</color> <!-- Beige -->
+
+    <!-- Modern Theme -->
+    <color name="modern_primary">#1A56DB</color> <!-- Ko'k -->
+    <color name="modern_accent">#00C9A7</color> <!-- Yashil -->
+    <color name="modern_background">#F8FAFC</color>
+
+    <!-- Dark Theme -->
+    <color name="dark_primary">#0D1117</color> <!-- Qora -->
+    <color name="dark_accent">#D4A843</color> <!-- Oltin -->
+    <color name="dark_background">#161B22</color>
+
+    <!-- Project Colors (Fixing missing resources) -->
+    <color name="purple_500">#6200EE</color>
+    <color name="teal_700">#018786</color>
+
+    <!-- Default UI colors -->
+    <color name="colorPrimary">@color/classic_primary</color>
+    <color name="colorPrimaryDark">#6F4B30</color>
+    <color name="colorAccent">@color/classic_accent</color>
+</resources>

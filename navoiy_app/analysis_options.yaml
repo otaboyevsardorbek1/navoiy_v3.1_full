@@ -1,0 +1,13 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    avoid_print: false
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true
+    prefer_final_locals: true
+    unnecessary_this: true
+    use_build_context_synchronously: true
+    avoid_unnecessary_containers: true
+    sized_box_for_whitespace: true
+    avoid_redundant_argument_values: true

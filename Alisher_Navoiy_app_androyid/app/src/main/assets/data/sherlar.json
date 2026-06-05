@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "slug": "gurbatda-garib",
+    "title": "G'urbatda g'arib shodmon bo'lmas emish",
+    "content": "G'urbatda g'arib shodmon bo'lmas emish,\nEl anga shafiqu mehribon bo'lmas emish.\nOltun qafas ichra gar qizil gul bo'lsa,\nBulbulga tikandek oshiyon bo'lmas emish.",
+    "type": "G'azal",
+    "is_favorite": 0,
+    "like_count": 120,
+    "version": 1
+  },
+  {
+    "id": 2,
+    "slug": "korgali-husnungni",
+    "title": "Ko'rgali husnungni zoru mubtalo bo'ldim sanga",
+    "content": "Ko'rgali husnungni zoru mubtalo bo'ldim sanga,\nIshqing o'tig'a giriftoru balo bo'ldim sanga.\nQatlim uchun gar tahrir etsang qoshu ko'z ishorat,\nIxtiyorim birla taslimu rizo bo'ldim sanga.",
+    "type": "G'azal",
+    "is_favorite": 1,
+    "like_count": 250,
+    "version": 1
+  }
+]

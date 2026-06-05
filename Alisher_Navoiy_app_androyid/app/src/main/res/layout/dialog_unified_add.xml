@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ma'lumot turini tanlang:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerDataType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/admin_data_types"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Asar Fields -->
+        <LinearLayout
+            android:id="@+id/layoutAsarFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <EditText android:id="@+id/etAsarTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Asar nomi" />
+            <EditText android:id="@+id/etAsarSlug" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Slug (URL uchun)" />
+            <EditText android:id="@+id/etAsarCategory" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Kategoriya" />
+            <EditText android:id="@+id/etAsarDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Tavsif" android:minLines="2" />
+        </LinearLayout>
+
+        <!-- Sher Fields -->
+        <LinearLayout
+            android:id="@+id/layoutSherFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <EditText android:id="@+id/etSherTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="She'r nomi" />
+            <EditText android:id="@+id/etSherContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="She'r matni" android:minLines="5" android:gravity="top" />
+            <EditText android:id="@+id/etSherType" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Turi (masalan: G'azal)" />
+        </LinearLayout>
+
+        <!-- Quiz Fields -->
+        <LinearLayout
+            android:id="@+id/layoutQuizFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <EditText android:id="@+id/etQuizAsarSlug" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Qaysi asar uchun? (slug)" />
+            <EditText android:id="@+id/etQuizPage" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Sahifa raqami" android:inputType="number" />
+            <EditText android:id="@+id/etQuizQuestion" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Savol" />
+            <EditText android:id="@+id/etQuizOptions" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Variantlar (vergul bilan ajrating)" />
+            <EditText android:id="@+id/etQuizCorrect" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="To'g'ri javob indeksi (0, 1...)" android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Dictionary Fields -->
+        <LinearLayout
+            android:id="@+id/layoutDictFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <EditText android:id="@+id/etDictTerm" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="So'z" />
+            <EditText android:id="@+id/etDictDefinition" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Izoh" android:minLines="2" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

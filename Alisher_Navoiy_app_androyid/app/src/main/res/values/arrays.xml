@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="admin_data_types">
+        <item>Asar</item>
+        <item>She\'r</item>
+        <item>Quiz (Savol)</item>
+        <item>Lug\'at (So\'z)</item>
+    </string-array>
+</resources>

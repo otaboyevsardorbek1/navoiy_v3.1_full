@@ -1,0 +1,18 @@
+{
+  "asar_id": 4,
+  "slug": "sabai-sayyor",
+  "title": "Sab'ai sayyor",
+  "version": 1,
+  "checksum": "sha256-hash4",
+  "total_pages": 1,
+  "language": "uz_latin",
+  "pages": [
+    {
+      "page_number": 1,
+      "title": "Bahrom Go'r qissasi",
+      "content": "Sab'ai sayyor 'Xamsa'ning to'rtinchi dostonidir. Unda etti iqlim va etti go'zal haqida hikoya qilinadi...",
+      "word_count": 15,
+      "quizzes": []
+    }
+  ]
+}

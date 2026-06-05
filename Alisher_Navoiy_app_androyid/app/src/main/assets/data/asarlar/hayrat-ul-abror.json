@@ -1,0 +1,36 @@
+{
+  "asar_id": 1,
+  "slug": "hayrat-ul-abror",
+  "title": "Hayrat ul-abror",
+  "version": 1,
+  "checksum": "sha256-hash123",
+  "total_pages": 2,
+  "language": "uz_latin",
+  "pages": [
+    {
+      "page_number": 1,
+      "title": "Muqaddima",
+      "content": "Bismillahir rohmanir rohiym. Ushbu asar Alisher Navoiyning 'Xamsa' dostonining birinchisidir...",
+      "word_count": 15,
+      "quizzes": [
+        {
+          "id": 101,
+          "question": "'Hayrat ul-abror' qaysi turkumga kiradi?",
+          "type": "single",
+          "options": ["Xamsa", "Xazoyinul-maoniy", "Lisonut-tayr", "Majolisun-nafois"],
+          "correct_answers": [0],
+          "explanation": "Hayrat ul-abror Xamsa turkumining birinchi dostonidir.",
+          "difficulty": 1,
+          "points": 10
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "title": "Birinchi maqolat",
+      "content": "Iymon va islom bayonida. Inson ko'ngli iymon nuri bilan yorug' bo'lmog'i lozim...",
+      "word_count": 20,
+      "quizzes": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <EditText android:id="@+id/etAsarTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Asar nomi (Lotin)" />
+        <EditText android:id="@+id/etAsarTitleUz" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Asar nomi (Kirill/O'zbek)" />
+        <EditText android:id="@+id/etAsarSlug" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Slug (masalan: xamsa-hayrat-ul-abror)" />
+        <EditText android:id="@+id/etAsarCategory" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Kategoriya (masalan: Doston)" />
+        <EditText android:id="@+id/etAsarDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Tavsif" android:minLines="3" android:gravity="top" />
+        <EditText android:id="@+id/etAsarYear" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Yozilgan yili" android:inputType="number" />
+    </LinearLayout>
+</ScrollView>

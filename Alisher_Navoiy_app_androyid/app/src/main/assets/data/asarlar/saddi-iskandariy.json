@@ -1,0 +1,18 @@
+{
+  "asar_id": 5,
+  "slug": "saddi-iskandariy",
+  "title": "Saddi Iskandariy",
+  "version": 1,
+  "checksum": "sha256-hash5",
+  "total_pages": 1,
+  "language": "uz_latin",
+  "pages": [
+    {
+      "page_number": 1,
+      "title": "Adolatli shoh",
+      "content": "Saddi Iskandariy 'Xamsa'ning beshinchi dostonidir. Unda Iskandar Zulqarnayn hayoti va adolati tasvirlangan...",
+      "word_count": 15,
+      "quizzes": []
+    }
+  ]
+}

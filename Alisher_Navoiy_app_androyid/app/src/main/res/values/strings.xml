@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Alisher Navoiy app</string>
+
+    <!-- Auth -->
+    <string name="welcome">Xush kelibsiz</string>
+    <string name="login">Login</string>
+    <string name="password">Parol</string>
+    <string name="enter">Kirish</string>
+    <string name="forgot_password">Parolni unutdingizmi?</string>
+    <string name="no_account_register">Hisobingiz yo\'qmi? Ro\'yxatdan o\'ting</string>
+    <string name="offline_mode_btn">Offline rejimda kirish</string>
+
+    <string name="register">Ro\'yxatdan o\'tish</string>
+    <string name="full_name">To\'liq ism</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="have_account_login">Hisobingiz bormi? Kirish</string>
+
+    <string name="reset_password">Parolni tiklash</string>
+    <string name="email_hint">Email manzilingiz</string>
+    <string name="send_reset_instructions">Tiklash ko\'rsatmalarini yuborish</string>
+    <string name="logout">Tizimdan chiqish</string>
+
+    <!-- Sync -->
+    <string name="sync_status">Ma\'lumotlar holati</string>
+    <string name="last_sync">Oxirgi sinxronizatsiya: %1$s</string>
+    <string name="never">Hech qachon</string>
+    <string name="offline_count">Offline asarlar soni: %1$d</string>
+    <string name="sync_now">Hozir sinxronlash</string>
+    <string name="loading">Yuklanmoqda...</string>
+    <string name="sync_finished">Sinxronizatsiya yakunlandi</string>
+
+    <!-- Settings -->
+    <string name="settings">Sozlamalar</string>
+    <string name="api_settings">API Sozlamalari</string>
+    <string name="api_url_hint">Backend API URL</string>
+    <string name="app_design">Ilova dizayni (Tema)</string>
+    <string name="theme_classic">Klassik (Navoiy uslubi)</string>
+    <string name="theme_modern">Zamonaviy (Modern)</string>
+    <string name="theme_dark">Tungi rejim (Dark)</string>
+    <string name="save_settings">Barcha sozlamalarni saqlash</string>
+    <string name="save_and_apply">Saqlash va qo\'llash</string>
+
+    <!-- Profile -->
+    <string name="profile">Profil</string>
+    <string name="my_results">Mening natijalarim</string>
+    <string name="works_read">Asarlar o\'qildi</string>
+    <string name="total_points">Jami ballar</string>
+    <string name="quiz_answers">Savollarga javob</string>
+    <string name="favorites">Saqlanganlar</string>
+    <string name="default_user">Foydalanuvchi</string>
+
+    <!-- UI Alerts & Messages -->
+    <string name="error_login_required">Loginni kiriting</string>
+    <string name="error_password_required">Parolni kiriting</string>
+    <string name="welcome_back">Xush kelibsiz!</string>
+    <string name="select_answer">Javobni tanlang</string>
+    <string name="correct_answer">To\'gri! +%1$d ball</string>
+    <string name="wrong_answer">Noto\'gri. %1$s</string>
+    <string name="asar_downloaded">Kitob yuklandi</string>
+    <string name="asar_deleted">Kitob qurilmadan o\'chirildi</string>
+    <string name="offline_mode_forced">Oflayn rejim (Majburiy)</string>
+    <string name="offline_mode_no_internet">Internet yo\'qligi sababli oflayn rejim</string>
+    <string name="cannot_download_offline">Oflayn rejimda yuklab bo\'lmaydi</string>
+
+</resources>

@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "generated_at": "2025-01-01T00:00:00Z",
+  "total": 8,
+  "sherlar": [
+    {
+      "id": 1,
+      "slug": "kongul-mulki",
+      "type": "gazal",
+      "title": "Ko'ngul mulki",
+      "content": "Ko'ngul mulkida sulton bo'lsa ishq,\nNechuk ta'rif etsam, ne bo'lsa farq?\nKo'z — dengizi ul mulkning, ko'ngl — bar,\nKo'rib bo'lmas ul daryoni zevar.\n\nTushunmas el bu so'zlarning ma'nisin,\nKim ko'ngli yo'q, bilmas ishq me'yosin.\n\nNavoiy, ko'nglungda ishq bo'lmasa,\nHayot ne kerak, umr bo'lmasa?",
+      "description": "Ko'ngul va ishq haqida g'azal",
+      "like_count": 145,
+      "version": 1,
+      "asar_id": null
+    },
+    {
+      "id": 2,
+      "slug": "ilm-madhi",
+      "type": "ruboiy",
+      "title": "Ilm madhi",
+      "content": "Ilm ahlini aziz tutkim, ilm aziz,\nIlmsiz kishini bilgil sen kamsiz.\nKim ilm o'rganar, ul inson bo'lur,\nIlmsiz yurgan — inson emas, mol bo'lur.",
+      "description": "Ilm va ma'rifat haqida ruboiy",
+      "like_count": 289,
+      "version": 1,
+      "asar_id": null
+    },
+    {
+      "id": 3,
+      "slug": "vatan-sevgisi",
+      "type": "qita",
+      "title": "Vatan sevgisi",
+      "content": "Vatandir kishiga jannatdan aziz,\nVatansiz yashagan har dam bo'lur qiz.\nKo'z yoshlar to'kar vatandin uzoq,\nKim ko'rmas yana o'lkasini, yurtini.\n\nNavoiy dedi: Vatanni sevmoq — din,\nVatansiz yashash — o'limdan yomon kin.",
+      "description": "Vatan sevgisini ulug'lovchi she'r",
+      "like_count": 312,
+      "version": 1,
+      "asar_id": null
+    },
+    {
+      "id": 4,
+      "slug": "hikmat-kishi-qadri",
+      "type": "hikmat",
+      "title": "Hikmat: Kishi qadri",
+      "content": "Kishi qadrin bilur eding bir kun,\nAmmo ketsa, bilinur qadr tamom.\nBorida qadrin bil, ketmasin deb,\nYo'qolsa, armoni qolur behad.\n\nNavoiy dedi: Qadrsizlik — o'lim,\nQadrlangan kishi — tirik, bor, salim.",
+      "description": "Inson qadri haqida hikmat",
+      "like_count": 421,
+      "version": 1,
+      "asar_id": null
+    },
+    {
+      "id": 5,
+      "slug": "dostlik-haqida",
+      "type": "ruboiy",
+      "title": "Do'stlik haqida",
+      "content": "Do'st ul erur kim, qilgay dard qo'shib,\nYolg'iz qo'ymas, bir umr yonib.\nYovuz kunda bilinar do'st va dushman,\nDo'stlik — oltindek sinashdan o'tib.",
+      "description": "Haqiqiy do'stlik haqida",
+      "like_count": 178,
+      "version": 1,
+      "asar_id": null
+    },
+    {
+      "id": 6,
+      "slug": "bahor-fasli",
+      "type": "gazal",
+      "title": "Bahor fasli",
+      "content": "Bahor fasli kelib gul yuzin ochdi,\nBulbul nag'masi bog'larni to'ldi.\nHar yon lola va rayhon isi tarar,\nKo'ngullar shodlig'i cheksiz qo'yar.\n\nYashil kiygan daraxtlar raqsga tushdi,\nNavoiy, bahor — umr bahoriman,\nO'tib ketsa, armoni ko'p dariman.",
+      "description": "Bahor go'zalligiga bag'ishlangan she'r",
+      "like_count": 198,
+      "version": 1,
+      "asar_id": null
+    },
+    {
+      "id": 7,
+      "slug": "xub-el-bila",
+      "type": "qita",
+      "title": "Xub el bila",
+      "content": "Xub el bila suhbat tutubon xub o'lg'il,\nYaxshini talab qilg'il-u matlub o'lg'il.\nShirin so'z ila xalqqa marg'ub o'lg'il,\nYumshoq de hadisingni-yu, mahbub o'lg'il.",
+      "description": "Yaxshilik va so'z madhi — tilshunoslik integratsiyasi uchun namuna",
+      "like_count": 256,
+      "version": 1,
+      "asar_id": null
+    },
+    {
+      "id": 8,
+      "slug": "adolat-haqida",
+      "type": "hikmat",
+      "title": "Adolat haqida",
+      "content": "Adolat ila bo'l agar sulton bo'lsang,\nZulm ila taxt ustida o'ltirsang ham.\nEl ko'ngli mulkini zabt etmak uchun,\nBir mard bo'l, bir odil bo'l, bir inson bo'l.",
+      "description": "Adolat va podshohlik haqida hikmat",
+      "like_count": 334,
+      "version": 1,
+      "asar_id": null
+    }
+  ]
+}

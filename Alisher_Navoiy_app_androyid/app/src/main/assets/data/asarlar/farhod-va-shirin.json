@@ -1,0 +1,29 @@
+{
+  "asar_id": 2,
+  "slug": "farhod-va-shirin",
+  "title": "Farhod va Shirin",
+  "version": 1,
+  "checksum": "sha256-hash456",
+  "total_pages": 1,
+  "language": "uz_latin",
+  "pages": [
+    {
+      "page_number": 1,
+      "title": "Doston muqaddimasi",
+      "content": "Farhod va Shirin dostoni 'Xamsa'ning ikkinchi dostonidir. Unda chinakam ishq va qahramonlik tasvirlangan...",
+      "word_count": 12,
+      "quizzes": [
+        {
+          "id": 201,
+          "question": "Farhod va Shirin nechanchi doston?",
+          "type": "single",
+          "options": ["1-doston", "2-doston", "3-doston", "4-doston"],
+          "correct_answers": [1],
+          "explanation": "Bu doston Xamsa turkumining ikkinchisidir.",
+          "difficulty": 1,
+          "points": 10
+        }
+      ]
+    }
+  ]
+}
