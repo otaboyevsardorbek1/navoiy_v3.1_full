@@ -1,0 +1,31 @@
+# Konfiguratsiya va maxfiy ma'lumotlar
+config.json
+config.yaml
+*.config
+
+# Log fayllar
+android_extractor.log
+*.log
+
+# Kesh
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Hisobotlar va output
+output/
+backups/
+*.zip
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

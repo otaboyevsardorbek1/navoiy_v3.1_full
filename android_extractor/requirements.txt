@@ -1,0 +1,10 @@
+# Android Studio Loyiha Tahlilchisi - Tashqi kutubxonalar
+
+# Asosiy (ixtiyoriy)
+ijson>=3.0.0          # Katta JSON fayllar uchun streaming
+Pillow>=8.0.0        # Rasm o'lchamlari uchun
+openpyxl>=3.0.0      # Excel eksport
+tqdm>=4.50.0         # Progress bar
+pyyaml>=5.3.0        # YAML konfiguratsiya
+requests>=2.25.0     # API aloqalari (Telegram, Jira)
+python-telegram-bot>=13.0  # Telegram bot
