@@ -63,6 +63,12 @@ class User(Base):
     read_progress = relationship("ReadProgress", back_populates="user", cascade="all, delete-orphan")
     favorites = relationship("Favorite", back_populates="user", cascade="all, delete-orphan")
     quiz_results = relationship("QuizResult", back_populates="user", cascade="all, delete-orphan")
+    # User model ichiga
+    email_verified = Column(Boolean, default=False, nullable=False)
+    email_verification_token = Column(String(255), nullable=True, unique=True)
+    email_verification_token_expires = Column(DateTime(timezone=True), nullable=True)
+    reset_password_token = Column(String(255), nullable=True, unique=True)
+    reset_password_token_expires = Column(DateTime(timezone=True), nullable=True)
 
 
 class RefreshToken(Base):

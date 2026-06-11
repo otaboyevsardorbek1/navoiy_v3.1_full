@@ -56,3 +56,18 @@ def decode_token(token: str) -> dict:
 
 def verify_token_type(payload: dict, expected: str) -> bool:
     return payload.get("type") == expected
+
+import secrets
+from datetime import datetime, timedelta, timezone
+
+def generate_email_token() -> str:
+    return secrets.token_urlsafe(32)
+
+def get_token_expiry(minutes: int = 60) -> datetime:
+    return datetime.now(timezone.utc) + timedelta(minutes=minutes)
+
+import secrets
+from datetime import timedelta
+
+def generate_random_token() -> str:
+    return secrets.token_urlsafe(32)

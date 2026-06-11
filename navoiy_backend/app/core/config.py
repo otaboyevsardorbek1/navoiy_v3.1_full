@@ -20,7 +20,8 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/navoiy_db"
     DATABASE_URL_SYNC: str = "postgresql://postgres:postgres@localhost:5432/navoiy_db"
-
+    # Redis
+    REDIS_URL: str = "redis://localhost:6379/0"
     # CORS
     ALLOWED_ORIGINS: List[str] = [
         "http://localhost",
@@ -38,6 +39,13 @@ class Settings(BaseSettings):
 
     # Sync
     SYNC_BUNDLE_VERSION: int = 1   # Har full sync da oshiriladi
+    # Email settings
+    SMTP_SERVER: str = "smtp.gmail.com"
+    SMTP_PORT: int = 465
+    SMTP_USERNAME: str = "otaboyevsardorbek295@gmail.com"      # Gmail manzili
+    SMTP_PASSWORD: str = "pvkl fcme yznf ujom "         # Gmail app paroli
+    SMTP_FROM_EMAIL: str = "otaboyevsardorbek295@gmail.com"
+    FRONTEND_URL: str = "http://localhost:5500"      # Frontend manzili
 
     class Config:
         env_file = ".env"

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Alisher Navoiy — Ilmiy va Adabiy Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, 'Segoe UI', 'Roboto', sans-serif;
+        }
+        /* Classic theme (default) */
+        :root {
+            --bg-primary: #F5F5DC;
+            --surface: #FFFDF5;
+            --primary: #8B5E3C;
+            --primary-dark: #6F4B30;
+            --accent: #D4A843;
+            --text-main: #2C1B0E;
+            --text-secondary: #5D3A1A;
+            --border: #E9DCC9;
+            --card-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            --quiz-bg: #FDF6E3;
+        }
+        body.modern {
+            --bg-primary: #F8FAFC;
+            --surface: #FFFFFF;
+            --primary: #1A56DB;
+            --primary-dark: #0E3A8A;
+            --accent: #00C9A7;
+            --text-main: #1E293B;
+            --text-secondary: #475569;
+            --border: #E2E8F0;
+            --quiz-bg: #F1F5F9;
+        }
+        body.dark {
+            --bg-primary: #161B22;
+            --surface: #0D1117;
+            --primary: #D4A843;
+            --primary-dark: #B88A2C;
+            --accent: #FBBF24;
+            --text-main: #E2E8F0;
+            --text-secondary: #94A3B8;
+            --border: #334155;
+            --quiz-bg: #1E293B;
+        }
+        body {
+            background: var(--bg-primary);
+            color: var(--text-main);
+            transition: background 0.2s, color 0.2s;
+        }
+        .app-container {
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background: var(--surface);
+            box-shadow: 0 0 30px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .app-header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+        .logo i { margin-right: 6px; }
+        .nav-buttons { display: flex; gap: 0.5rem; }
+        .nav-btn {
+            background: rgba(255,255,240,0.2);
+            border: none;
+            padding: 0.4rem 0.9rem;
+            border-radius: 30px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .nav-btn:hover { background: rgba(255,255,240,0.4); }
+        .main-content { flex: 1; padding: 1.2rem; }
+        .card {
+            background: var(--surface);
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+        }
+        .btn {
+            background: var(--primary);
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            transition: 0.2s;
+        }
+        .btn:hover { background: var(--primary-dark); }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-outline:hover { background: var(--primary); color: white; }
+        .btn-sm { padding: 0.3rem 0.8rem; font-size: 0.8rem; }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--surface);
+            color: var(--text-main);
+        }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+        .tab-bar {
+            display: flex;
+            gap: 0.2rem;
+            background: var(--surface);
+            border-bottom: 2px solid var(--border);
+            padding: 0.5rem 0.2rem;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+        }
+        .tab {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 30px;
+            white-space: nowrap;
+            transition: 0.2s;
+        }
+        .tab.active {
+            background: var(--primary);
+            color: white;
+        }
+        .word-link {
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            color: var(--accent);
+        }
+        .flex-between { display: flex; justify-content: space-between; align-items: center; }
+        .badge {
+            background: var(--border);
+            padding: 0.2rem 0.6rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+        }
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 30px;
+            text-align: center;
+            z-index: 1000;
+            animation: fadein 0.3s;
+        }
+        @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            padding: 1rem;
+            color: var(--text-secondary);
+        }
+        .quiz-area {
+            background: var(--quiz-bg);
+            border-radius: 20px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .loader { text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+<div class="app-container" id="app">
+    <div class="app-header" id="appHeader">
+        <div class="logo"><i class="fas fa-book-open"></i> Navoiy <small>akademiya</small></div>
+        <div class="nav-buttons" id="headerActions"></div>
+    </div>
+    <div class="main-content" id="mainContent">⏳ Yuklanmoqda...</div>
+    <footer><i class="fas fa-mosque"></i> Alisher Navoiy nomidagi xalqaro jamg'arma | barcha huquqlar himoyalangan</footer>
+</div>
+<script>
+    // ---------- GLOBAL STATE ----------
+    let currentView = 'login';
+    let currentTab = 'asarlar';
+    let currentAsarSlug = null;
+    let currentAsarData = null;
+    let currentPageIndex = 0;
+    let authToken = localStorage.getItem('access_token');
+    let userRole = localStorage.getItem('user_role') || 'user';
+    let apiBaseUrl = localStorage.getItem('api_url') || 'https://c0a5-84-54-115-89.ngrok-free.app/api/v1/';
+    let theme = localStorage.getItem('app_theme') || 'classic';
+    let offlineMode = localStorage.getItem('offline_mode') === 'true';
+    let offlineAsarCache = {};
+    let dictionaryTerms = [];
+
+    // ---------- HELPERS ----------
+    function applyTheme() { document.body.className = (theme === 'modern' ? 'modern' : (theme === 'dark' ? 'dark' : '')); }
+    applyTheme();
+
+    function showToast(msg, isError = false) {
+        let toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.style.background = isError ? '#D32F2F' : '#2E7D32';
+        toast.innerHTML = `<i class="fas ${isError ? 'fa-exclamation-triangle' : 'fa-check-circle'}"></i> ${msg}`;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }
+
+    async function apiCall(endpoint, method = 'GET', body = null, auth = true) {
+        let url = apiBaseUrl.replace(/\/$/, '') + '/' + endpoint.replace(/^\//, '');
+        let headers = { 'Content-Type': 'application/json', 'ngrok-skip-browser-warning': 'true' };
+        if (auth && authToken) headers['Authorization'] = `Bearer ${authToken}`;
+        let options = { method, headers };
+        if (body) options.body = JSON.stringify(body);
+        try {
+            let resp = await fetch(url, options);
+            if (resp.status === 401 && auth) { localStorage.clear(); authToken = null; navigateTo('login'); throw new Error("Sessiya tugadi"); }
+            let data = await resp.json();
+            if (!resp.ok) throw new Error(data.detail || data.message || `Xato ${resp.status}`);
+            return data;
+        } catch (err) { console.error(endpoint, err); if (!offlineMode) showToast(err.message, true); throw err; }
+    }
+
+    function initDictionary() {
+        if (dictionaryTerms.length === 0) {
+            dictionaryTerms = [
+                { term: "ko'ngul", definition: "Qalb, yurak, ruh.", category: "Eski o'zbek tili" },
+                { term: "ishq", definition: "Illohiy yoki dunyoviy muhabbat.", category: "Eski o'zbek tili" },
+                { term: "g'urbat", definition: "Vatandan uzoqlik, g'am-g'ussa.", category: "Adabiyot" },
+                { term: "shafiqu", definition: "Mehribon, rahmdil.", category: "Eski o'zbek tili" }
+            ];
+        }
+    }
+    function lookupWord(word) { let clean = word.toLowerCase().replace(/[^a-z'‘’]/g, ''); return dictionaryTerms.find(t => t.term.toLowerCase() === clean); }
+
+    // ---------- NAVIGATION ----------
+    function navigateTo(view, params = {}) {
+        currentView = view;
+        if (view === 'main') renderMainView();
+        else if (view === 'login') renderLogin();
+        else if (view === 'register') renderRegister();
+        else if (view === 'forgot') renderForgot();
+        else if (view === 'reset-password') renderResetPassword(params.token);
+        else if (view === 'verify-email') renderVerifyEmail(params.token);
+        else if (view === 'admin') renderAdminPanel();
+        else if (view === 'reader') { currentAsarSlug = params.slug; renderReader(); }
+        else renderLogin();
+        updateHeader();
+    }
+
+    function updateHeader() {
+        let headerDiv = document.getElementById('headerActions');
+        if (!headerDiv) return;
+        if (currentView === 'main' || currentView === 'admin') {
+            headerDiv.innerHTML = `<button class="nav-btn" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Chiqish</button>`;
+            document.getElementById('logoutBtn')?.addEventListener('click', () => { localStorage.clear(); authToken = null; navigateTo('login'); showToast("Chiqildi"); });
+        } else {
+            headerDiv.innerHTML = `<button class="nav-btn" id="settingsQuick"><i class="fas fa-cog"></i> Sozlamalar</button>`;
+            document.getElementById('settingsQuick')?.addEventListener('click', () => { if (currentView !== 'main') navigateTo('main'); setTimeout(() => switchMainTab('sozlamalar'), 50); });
+        }
+    }
+
+    async function switchMainTab(tabName) {
+        currentTab = tabName;
+        await loadTabContent(currentTab);
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        let activeTab = document.querySelector(`.tab[data-tab="${tabName}"]`);
+        if(activeTab) activeTab.classList.add('active');
+    }
+
+    // ===================== AUTH VIEWS =====================
+    function renderLogin() {
+        document.getElementById('mainContent').innerHTML = `
+            <div class="card" style="max-width:400px; margin:2rem auto;">
+                <h2><i class="fas fa-sign-in-alt"></i> Kirish</h2>
+                <input type="text" id="loginUsername" placeholder="Login yoki email">
+                <input type="password" id="loginPassword" placeholder="Parol">
+                <button class="btn" id="doLoginBtn"><i class="fas fa-arrow-right"></i> Kirish</button>
+                <div class="flex-between" style="margin-top:1rem;">
+                    <a href="#" id="toRegisterBtn"><i class="fas fa-user-plus"></i> Ro'yxatdan o'tish</a>
+                    <a href="#" id="toForgotBtn"><i class="fas fa-key"></i> Parolni unutdingizmi?</a>
+                </div>
+                <hr><button class="btn-outline btn" id="offlineModeBtn"><i class="fas fa-database"></i> Offline rejim (faqat yuklangan asarlar)</button>
+            </div>`;
+        document.getElementById('doLoginBtn')?.addEventListener('click', async () => {
+            let username = document.getElementById('loginUsername').value;
+            let password = document.getElementById('loginPassword').value;
+            if (!username || !password) return showToast("Login va parolni kiriting", true);
+            try {
+                let resp = await apiCall('auth/login', 'POST', { username, password, device_info: "WebFrontend" });
+                if (resp && resp.access_token) {
+                    authToken = resp.access_token;
+                    localStorage.setItem('access_token', authToken);
+                    userRole = resp.user?.role || 'user';
+                    localStorage.setItem('user_role', userRole);
+                    localStorage.setItem('username', resp.user?.username || username);
+                    localStorage.setItem('user_info', JSON.stringify({ full_name: resp.user?.full_name || username }));
+                    showToast(`Xush kelibsiz, ${resp.user?.full_name || username}!`);
+                    navigateTo('main');
+                }
+            } catch(e) { showToast(e.message, true); }
+        });
+        document.getElementById('toRegisterBtn')?.addEventListener('click', (e) => { e.preventDefault(); navigateTo('register'); });
+        document.getElementById('toForgotBtn')?.addEventListener('click', (e) => { e.preventDefault(); navigateTo('forgot'); });
+        document.getElementById('offlineModeBtn')?.addEventListener('click', () => { offlineMode = true; localStorage.setItem('offline_mode', 'true'); navigateTo('main'); });
+    }
+
+    function renderRegister() {
+        document.getElementById('mainContent').innerHTML = `
+            <div class="card" style="max-width:400px; margin:2rem auto;">
+                <h2><i class="fas fa-user-plus"></i> Ro'yxatdan o'tish</h2>
+                <input id="regFullname" placeholder="F.I.SH"><input id="regUsername" placeholder="Username">
+                <input id="regEmail" type="email" placeholder="Email"><input id="regPassword" type="password" placeholder="Parol">
+                <button class="btn" id="doRegisterBtn">Ro'yxatdan o'tish</button>
+                <a href="#" id="backLoginBtn"><i class="fas fa-arrow-left"></i> Kirish</a>
+            </div>`;
+        document.getElementById('doRegisterBtn')?.addEventListener('click', async () => {
+            let full_name = document.getElementById('regFullname').value, username = document.getElementById('regUsername').value;
+            let email = document.getElementById('regEmail').value, password = document.getElementById('regPassword').value;
+            if (!username || !password || !email) return showToast("Barcha maydonlarni to'ldiring", true);
+            try {
+                await apiCall('auth/register', 'POST', { username, email, full_name, password });
+                showToast("Ro'yxatdan o'tdingiz. Iltimos, emailingizni tasdiqlang.");
+                navigateTo('login');
+            } catch(e) { showToast(e.message, true); }
+        });
+        document.getElementById('backLoginBtn')?.addEventListener('click', (e) => { e.preventDefault(); navigateTo('login'); });
+    }
+
+    function renderForgot() {
+        document.getElementById('mainContent').innerHTML = `
+            <div class="card" style="max-width:400px; margin:2rem auto;">
+                <h3><i class="fas fa-envelope"></i> Parolni tiklash</h3>
+                <input id="resetEmail" placeholder="Email manzilingiz">
+                <button class="btn" id="sendResetBtn"><i class="fas fa-paper-plane"></i> Tiklash havolasini yuborish</button>
+                <a href="#" id="backLoginReset"><i class="fas fa-arrow-left"></i> Orqaga</a>
+            </div>`;
+        document.getElementById('sendResetBtn')?.addEventListener('click', async () => {
+            let email = document.getElementById('resetEmail').value;
+            if (!email) return showToast("Email kiriting", true);
+            try {
+                await apiCall(`auth/forgot-password?email=${encodeURIComponent(email)}`, 'POST');
+                showToast("Tiklash havolasi emailga yuborildi");
+                navigateTo('login');
+            } catch(e) { showToast(e.message, true); }
+        });
+        document.getElementById('backLoginReset')?.addEventListener('click', (e) => { e.preventDefault(); navigateTo('login'); });
+    }
+
+    function renderResetPassword(token) {
+        document.getElementById('mainContent').innerHTML = `
+            <div class="card" style="max-width:400px; margin:2rem auto;">
+                <h3><i class="fas fa-lock"></i> Yangi parol o‘rnatish</h3>
+                <input type="password" id="newPassword" placeholder="Yangi parol">
+                <input type="password" id="confirmPassword" placeholder="Parolni takrorlang">
+                <button class="btn" id="resetPasswordBtn"><i class="fas fa-save"></i> Saqlash</button>
+            </div>`;
+        document.getElementById('resetPasswordBtn')?.addEventListener('click', async () => {
+            let pwd = document.getElementById('newPassword').value;
+            let confirm = document.getElementById('confirmPassword').value;
+            if (pwd !== confirm) return showToast("Parollar mos emas", true);
+            try {
+                await apiCall('auth/reset-password', 'POST', { token, new_password: pwd });
+                showToast("Parol o‘zgartirildi, endi tizimga kiring");
+                navigateTo('login');
+            } catch(e) { showToast(e.message, true); }
+        });
+    }
+
+    async function renderVerifyEmail(token) {
+        try {
+            await apiCall(`auth/verify-email?token=${token}`, 'GET', null, false);
+            showToast("Email tasdiqlandi! Endi tizimga kira olasiz.");
+            navigateTo('login');
+        } catch(e) {
+            showToast(e.message || "Tasdiqlash xatosi", true);
+            navigateTo('login');
+        }
+    }
+
+    // ===================== MAIN VIEW (tabs) =====================
+    async function renderMainView() {
+        let container = document.getElementById('mainContent');
+        container.innerHTML = `
+            <div class="tab-bar" id="mainTabs">
+                <div class="tab" data-tab="asarlar"><i class="fas fa-book"></i> Asarlar</div>
+                <div class="tab" data-tab="sherlar"><i class="fas fa-feather-alt"></i> She'rlar</div>
+                <div class="tab" data-tab="reyting"><i class="fas fa-trophy"></i> Reyting</div>
+                <div class="tab" data-tab="sync"><i class="fas fa-sync-alt"></i> Sinxronizatsiya</div>
+                <div class="tab" data-tab="profil"><i class="fas fa-user-circle"></i> Profil</div>
+                <div class="tab" data-tab="sozlamalar"><i class="fas fa-sliders-h"></i> Sozlamalar</div>
+                ${userRole === 'admin' ? `<div class="tab" data-tab="adminpanel"><i class="fas fa-user-shield"></i> Admin</div>` : ''}
+            </div>
+            <div id="tabContent">Yuklanmoqda...</div>`;
+        document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+            currentTab = t.dataset.tab;
+            loadTabContent(currentTab);
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            t.classList.add('active');
+        }));
+        let defaultTab = document.querySelector(`.tab[data-tab="${currentTab}"]`);
+        if(defaultTab) defaultTab.classList.add('active');
+        await loadTabContent(currentTab);
+    }
+
+    async function loadTabContent(tab) {
+        let div = document.getElementById('tabContent');
+        if (tab === 'asarlar') await renderAsarlar(div);
+        else if (tab === 'sherlar') await renderSherlar(div);
+        else if (tab === 'reyting') await renderLeaderboard(div);
+        else if (tab === 'sync') renderSync(div);
+        else if (tab === 'profil') await renderProfile(div);
+        else if (tab === 'sozlamalar') renderSettings(div);
+        else if (tab === 'adminpanel') renderAdminPanel(div);
+    }
+
+    async function renderAsarlar(container) {
+        container.innerHTML = '<div class="loader"><i class="fas fa-spinner fa-pulse"></i> Asarlar ro‘yxati...</div>';
+        try {
+            let manifest = [];
+            if (!offlineMode) {
+                let resp = await apiCall('sync/manifest', 'GET', null, true);
+                if (resp && resp.asarlar) manifest = resp.asarlar.map(m => ({ ...m, title_uz: m.slug.replace(/-/g, ' ') }));
+            }
+            if (manifest.length === 0) manifest = [{ id: 1, slug: "hayrat-ul-abror", title_uz: "Hayrat ul-abror", total_pages: 22, version: 1 }];
+            let html = `<div class="grid-2">`;
+            for (let item of manifest) {
+                let isDownloaded = !!offlineAsarCache[item.slug];
+                html += `<div class="card">
+                    <h3><i class="fas fa-scroll"></i> ${item.title_uz}</h3>
+                    <div class="flex-between">
+                        <span class="badge"><i class="fas fa-file-alt"></i> ${item.total_pages || '?'} sahifa</span>
+                        ${!isDownloaded ? `<button class="btn-sm btn" data-slug="${item.slug}"><i class="fas fa-download"></i> Yuklab olish</button>` : `<button class="btn-sm btn-outline" data-read="${item.slug}"><i class="fas fa-book-reader"></i> O'qish</button>`}
+                    </div>
+                </div>`;
+            }
+            html += `</div>`;
+            container.innerHTML = html;
+            document.querySelectorAll('[data-slug]').forEach(btn => btn.addEventListener('click', async (e) => {
+                let slug = btn.dataset.slug;
+                try {
+                    let asarFull = await apiCall(`asarlar/${slug}/content`, 'GET', null, true);
+                    offlineAsarCache[slug] = asarFull;
+                    localStorage.setItem(`offline_asar_${slug}`, JSON.stringify(asarFull));
+                    showToast(`"${slug}" yuklandi`);
+                    renderAsarlar(container);
+                } catch(e) { showToast("Yuklab olishda xatolik", true); }
+            }));
+            document.querySelectorAll('[data-read]').forEach(btn => btn.addEventListener('click', () => navigateTo('reader', { slug: btn.dataset.read })));
+        } catch(e) { container.innerHTML = `<div class="card"><i class="fas fa-exclamation-triangle"></i> Xatolik: ${e.message}</div>`; }
+    }
+
+    async function renderSherlar(container) {
+        container.innerHTML = '<div class="loader"><i class="fas fa-spinner fa-pulse"></i> Sheʼrlar yuklanmoqda...</div>';
+        try {
+            let resp = await apiCall('sherlar?page=1&limit=50', 'GET', null, true);
+            let sherlar = resp.items || [];
+            let html = '';
+            for (let sher of sherlar) html += `<div class="card"><h3><i class="fas fa-music"></i> ${sher.title}</h3><p>${(sher.content || "").substring(0, 120)}...</p><div class="badge">${sher.type || "G'azal"}</div></div>`;
+            container.innerHTML = html;
+        } catch(e) { container.innerHTML = `<div class="card"><i class="fas fa-database"></i> Offline: sheʼrlar mavjud emas</div>`; }
+    }
+
+    async function renderLeaderboard(container) {
+        container.innerHTML = '<div class="loader"><i class="fas fa-spinner fa-pulse"></i> Reyting...</div>';
+        try {
+            let data = await apiCall('leaderboard', 'GET', null, true);
+            let rankings = data.rankings || [];
+            let html = `<div class="card"><h3><i class="fas fa-trophy"></i> TOP kitobxonlar</h3>`;
+            rankings.forEach(r => { html += `<div class="flex-between"><span><i class="fas fa-user"></i> ${r.rank}. ${r.full_name || r.username}</span><strong>${r.total_points} ball</strong></div>`; });
+            html += `</div>`;
+            container.innerHTML = html;
+        } catch(e) { container.innerHTML = `<div class="card">Reyting mavjud emas</div>`; }
+    }
+
+    function renderSync(container) {
+        let lastSync = localStorage.getItem('last_sync_time') || 'Hech qachon';
+        let offlineCount = Object.keys(offlineAsarCache).length;
+        container.innerHTML = `<div class="card">
+            <h3><i class="fas fa-sync-alt"></i> Sinxronizatsiya</h3><p>Oxirgi sinxron: ${lastSync}</p><p>Offline asarlar soni: ${offlineCount}</p>
+            <button class="btn" id="forceSyncBtn"><i class="fas fa-cloud-download-alt"></i> Barcha asarlarni yangilash</button>
+            <button class="btn-outline btn" id="clearOfflineBtn"><i class="fas fa-trash-alt"></i> Offline tozalash</button>
+        </div>`;
+        document.getElementById('forceSyncBtn')?.addEventListener('click', async () => {
+            try {
+                let manifest = await apiCall('sync/manifest', 'GET', null, true);
+                if (manifest.asarlar) {
+                    for (let item of manifest.asarlar) {
+                        let asar = await apiCall(`asarlar/${item.slug}/content`, 'GET', null, true);
+                        offlineAsarCache[item.slug] = asar;
+                        localStorage.setItem(`offline_asar_${item.slug}`, JSON.stringify(asar));
+                    }
+                    localStorage.setItem('last_sync_time', new Date().toLocaleString());
+                    showToast(`${manifest.asarlar.length} ta asar sinxronlandi`);
+                    renderSync(container);
+                }
+            } catch(e) { showToast("Sinxron xatolik", true); }
+        });
+        document.getElementById('clearOfflineBtn')?.addEventListener('click', () => {
+            offlineAsarCache = {};
+            for (let i=0; i<localStorage.length; i++) { let key = localStorage.key(i); if (key && key.startsWith('offline_asar_')) localStorage.removeItem(key); }
+            showToast("Offline kesh tozalandi");
+            renderSync(container);
+        });
+    }
+
+    async function renderProfile(container) {
+        container.innerHTML = '<div class="loader"><i class="fas fa-spinner fa-pulse"></i> Profil maʼlumotlari...</div>';
+        try {
+            let stats = await apiCall('user/stats', 'GET', null, true);
+            let userInfo = JSON.parse(localStorage.getItem('user_info') || '{"full_name":"Foydalanuvchi"}');
+            container.innerHTML = `<div class="card">
+                <h2><i class="fas fa-user-circle"></i> ${userInfo.full_name}</h2><p>@${localStorage.getItem('username') || "navoiy_sevuvchi"}</p>
+                <div class="grid-2"><div><i class="fas fa-book"></i> O'qilgan: ${stats.total_read || 0}</div><div><i class="fas fa-star"></i> Ball: ${stats.total_points || 0}</div><div><i class="fas fa-question-circle"></i> Quizlar: ${stats.total_quiz_answered || 0}</div><div><i class="fas fa-heart"></i> Sevimlilar: ${stats.favorite_count || 0}</div></div>
+                <button class="btn-outline btn" id="profileLogout"><i class="fas fa-sign-out-alt"></i> Chiqish</button>
+            </div>`;
+            document.getElementById('profileLogout')?.addEventListener('click', () => { localStorage.clear(); authToken = null; navigateTo('login'); });
+        } catch(e) { container.innerHTML = `<div class="card">Profil statistikasi vaqtinchalik mavjud emas</div>`; }
+    }
+
+    function renderSettings(container) {
+        container.innerHTML = `<div class="card">
+            <h3><i class="fas fa-plug"></i> API sozlamalari</h3><input id="apiUrlInput" value="${apiBaseUrl}" placeholder="Backend URL">
+            <div class="flex-between"><label><i class="fas fa-database"></i> Offline rejim</label><input type="checkbox" id="offlineSwitch" ${offlineMode ? 'checked' : ''}></div>
+            <h3><i class="fas fa-palette"></i> Interfeys uslubi</h3><select id="themeSelect">
+                <option value="classic" ${theme === 'classic' ? 'selected' : ''}>Klassik</option>
+                <option value="modern" ${theme === 'modern' ? 'selected' : ''}>Zamonaviy</option>
+                <option value="dark" ${theme === 'dark' ? 'selected' : ''}>Tungi</option>
+            </select>
+            <button class="btn" id="saveSettingsBtn"><i class="fas fa-save"></i> Saqlash</button>
+        </div>`;
+        document.getElementById('saveSettingsBtn')?.addEventListener('click', () => {
+            apiBaseUrl = document.getElementById('apiUrlInput').value;
+            theme = document.getElementById('themeSelect').value;
+            offlineMode = document.getElementById('offlineSwitch').checked;
+            localStorage.setItem('api_url', apiBaseUrl);
+            localStorage.setItem('app_theme', theme);
+            localStorage.setItem('offline_mode', offlineMode);
+            applyTheme();
+            showToast("Sozlamalar saqlandi");
+            navigateTo('main');
+        });
+    }
+
+    function renderAdminPanel(container = document.getElementById('tabContent')) {
+        container.innerHTML = `<div class="card">
+            <h3><i class="fas fa-tools"></i> Admin vositalari</h3>
+            <button class="btn" id="addDictTermBtn"><i class="fas fa-plus-circle"></i> Lug'atga soʻz qoʻshish</button>
+            <button class="btn-outline btn" id="addAsarBtn"><i class="fas fa-file-import"></i> Yangi asar (meta)</button>
+            <hr><h4><i class="fab fa-telegram"></i> Telegram sozlamalari</h4>
+            <input id="botToken" placeholder="Bot token"><input id="chatId" placeholder="Chat ID">
+            <button id="saveTelegramBtn" class="btn"><i class="fas fa-save"></i> Saqlash</button>
+        </div>`;
+        document.getElementById('addDictTermBtn')?.addEventListener('click', () => {
+            let term = prompt("So'z (lotin)");
+            let def = prompt("Ta'rifi");
+            if (term && def) { dictionaryTerms.push({ term: term.toLowerCase(), definition: def, category: "Admin qo'shgan" }); showToast(`"${term}" qo'shildi`); }
+        });
+        document.getElementById('addAsarBtn')?.addEventListener('click', async () => {
+            let slug = prompt("Asar slug (masalan: yetti-iqlim)");
+            let title = prompt("Sarlavha");
+            if (slug && title) {
+                try { await apiCall('asarlar', 'POST', { slug, title, category: "Doston", description: "Yangi asar" }, true); showToast("Asar yaratildi"); }
+                catch(e) { showToast("Xatolik", true); }
+            }
+        });
+        document.getElementById('saveTelegramBtn')?.addEventListener('click', async () => {
+            let token = document.getElementById('botToken').value, cid = document.getElementById('chatId').value;
+            if (token && cid) {
+                try { await apiCall('admin/settings?key=bot_token&value='+token, 'POST', null, true); await apiCall('admin/settings?key=chat_id&value='+cid, 'POST', null, true); showToast("Telegram saqlandi"); }
+                catch(e) {}
+            }
+        });
+    }
+
+    // ===================== READER =====================
+    async function renderReader() {
+        let container = document.getElementById('mainContent');
+        if (!currentAsarSlug) return navigateTo('main');
+        let asar = offlineAsarCache[currentAsarSlug];
+        if (!asar && !offlineMode) {
+            try { asar = await apiCall(`asarlar/${currentAsarSlug}/content`, 'GET', null, true); offlineAsarCache[currentAsarSlug] = asar; }
+            catch(e) { container.innerHTML = `<div class="card">Asar topilmadi</div>`; return; }
+        }
+        if (!asar) { container.innerHTML = `<div class="card">Asar mavjud emas</div>`; return; }
+        currentAsarData = asar;
+        let pages = asar.pages || [];
+        if (currentPageIndex >= pages.length) currentPageIndex = 0;
+        let page = pages[currentPageIndex];
+        initDictionary();
+
+        let contentHtml = page.content;
+        let words = contentHtml.split(/(\s+)/);
+        let wrapped = words.map(w => {
+            let clean = w.replace(/[^a-z'‘’]/gi, '');
+            if (clean.length > 2 && lookupWord(clean)) return `<span class="word-link" data-word="${clean}">${w}</span>`;
+            return w;
+        }).join('');
+
+        let quizHtml = '';
+        if (page.quizzes && page.quizzes.length) {
+            let quiz = page.quizzes[0];
+            quizHtml = `<div class="quiz-area"><h4><i class="fas fa-question-circle"></i> ${quiz.question}</h4><div id="quizOptions"></div><button class="btn-sm" id="submitQuizBtn"><i class="fas fa-check"></i> Javob berish</button><div id="quizFeedback"></div></div>`;
+        }
+        container.innerHTML = `<div class="card"><div class="flex-between"><button id="backToListBtn" class="btn-outline btn-sm"><i class="fas fa-arrow-left"></i> Asarlar</button><h2><i class="fas fa-book-open"></i> ${page.title}</h2></div>
+            <div id="readerContent" style="line-height:1.6; margin:1rem 0;">${wrapped}</div>
+            <div class="page-indicator flex-between"><button id="prevPageBtn" ${currentPageIndex===0?'disabled':''} class="btn-sm"><i class="fas fa-chevron-left"></i> Oldingi</button><span>${currentPageIndex+1} / ${pages.length}</span><button id="nextPageBtn" ${currentPageIndex===pages.length-1?'disabled':''} class="btn-sm">Keyingi <i class="fas fa-chevron-right"></i></button></div>${quizHtml}</div>`;
+        document.querySelectorAll('.word-link').forEach(el => el.addEventListener('click', (e) => {
+            let word = el.dataset.word;
+            let term = lookupWord(word);
+            if(term) alert(`📖 ${term.term} — ${term.definition}\n🏷️ ${term.category}`);
+            else alert(`"${word}" lug'atda topilmadi`);
+        }));
+        document.getElementById('prevPageBtn')?.addEventListener('click', () => { currentPageIndex--; renderReader(); });
+        document.getElementById('nextPageBtn')?.addEventListener('click', () => { currentPageIndex++; renderReader(); });
+        document.getElementById('backToListBtn')?.addEventListener('click', () => navigateTo('main'));
+        if (page.quizzes && page.quizzes.length) {
+            let quiz = page.quizzes[0];
+            let optDiv = document.getElementById('quizOptions');
+            quiz.options.forEach((opt, idx) => { let radio = document.createElement('div'); radio.innerHTML = `<label><input type="radio" name="quizOpt" value="${idx}"> ${opt}</label>`; optDiv.appendChild(radio); });
+            document.getElementById('submitQuizBtn')?.addEventListener('click', async () => {
+                let selected = document.querySelector('input[name="quizOpt"]:checked');
+                if (!selected) return showToast("Javob tanlang", true);
+                let answer = [parseInt(selected.value)];
+                try {
+                    let result = await apiCall('quiz/submit', 'POST', { quiz_id: quiz.id, selected_answers: answer, time_spent_seconds: 5 }, true);
+                    if (result.is_correct) showToast(`✅ To‘g‘ri! +${result.points_earned} ball`);
+                    else showToast(`❌ Noto‘g‘ri. ${result.explanation || "To'g'ri javob boshqa"}`);
+                } catch(e) { showToast("Quiz xatosi", true); }
+            });
+        }
+    }
+
+    // ---------- LOAD OFFLINE CACHE ----------
+    (function loadOfflineCache() {
+        for (let i=0; i<localStorage.length; i++) {
+            let key = localStorage.key(i);
+            if (key && key.startsWith('offline_asar_')) {
+                let slug = key.replace('offline_asar_', '');
+                try { offlineAsarCache[slug] = JSON.parse(localStorage.getItem(key)); } catch(e) {}
+            }
+        }
+    })();
+
+    // ---------- URL HASH ROUTING ----------
+    window.addEventListener('hashchange', () => {
+        const hash = window.location.hash.substring(1);
+        if (hash.startsWith('verify-email')) {
+            const token = hash.split('=')[1];
+            navigateTo('verify-email', { token });
+        } else if (hash.startsWith('reset-password')) {
+            const token = hash.split('=')[1];
+            navigateTo('reset-password', { token });
+        }
+    });
+
+    // Initial load
+    const initialHash = window.location.hash.substring(1);
+    if (initialHash.startsWith('verify-email')) {
+        const token = initialHash.split('=')[1];
+        navigateTo('verify-email', { token });
+    } else if (initialHash.startsWith('reset-password')) {
+        const token = initialHash.split('=')[1];
+        navigateTo('reset-password', { token });
+    } else if (authToken) {
+        navigateTo('main');
+    } else {
+        navigateTo('login');
+    }
+</script>
+</body>
+</html>

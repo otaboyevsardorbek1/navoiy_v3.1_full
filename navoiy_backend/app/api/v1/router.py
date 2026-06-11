@@ -6,8 +6,10 @@ from .endpoints.sherlar import router as sherlar_router, quiz_router
 from .endpoints.sync import router as sync_router
 from .endpoints.settings import router as settings_router
 from .endpoints.logs import router as logs_router
+from .endpoints.leaderboard import router as leaderboard_router
 
 api_router = APIRouter()
+api_router.include_router(leaderboard_router)
 api_router.include_router(auth_router)
 api_router.include_router(asarlar_router)
 api_router.include_router(sherlar_router)
